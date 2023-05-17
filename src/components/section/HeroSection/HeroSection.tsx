@@ -1,17 +1,19 @@
 import Link from "next/link";
 
+import css from "./HeroSection.module.css";
+
 const HeroSection = () => {
   return (
-    <section className="mt-14 py-10 ">
+    <section className={css.hero}>
       <div className="container mx-auto px-20 flex flex-col items-center">
-        <h1>Добро пожаловать к нам!</h1>
-        <Link href="/contact" className="text-center">
-          <button
-            className="p-2 bg-transparent rounded-lg border-red-600 border-2 hover:bg-red-500 hover:border-emerald-600 transition-all"
-            type="button"
-          >
-            Оставить заявку
-          </button>
+        <h1 className="text-5xl font-mono text-neutral-200 mb-4">
+          Добро пожаловать к нам!
+        </h1>
+        <Link
+          href="/contact"
+          className=" p-2 text-neutral-200 bg-transparent  rounded-lg border-neutral-200 border-2 hover:bg-neutral-400 hover:bg-opacity-25  hover:border-opacity-75 transition-all"
+        >
+          Оставить заявку
         </Link>
       </div>
     </section>
