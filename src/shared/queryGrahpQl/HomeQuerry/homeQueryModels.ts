@@ -1,5 +1,5 @@
 export interface IAllMenu {
-  menu?: { allArticles: IMenuItem[] };
+   allArticles: IMenuItem[] 
 }
 
 export interface IMenuItem {
@@ -7,15 +7,16 @@ export interface IMenuItem {
   id: string;
 }
 
-export interface IBgImage {
- 
-    bgImage: {
-      hero: {
-        alt: string;
-        responsiveImage: {
-          webpSrcSet: string;
-        };
-      };
-    };
+export interface IAllBenefits {
+    allBenefitArticles: IBenefitsItem[]
+}
+
+export interface IBenefitsItem {
+  title: string
+  id: string
+  description: string
+  coverImg: {
+    url: string
+  }
 
 }
