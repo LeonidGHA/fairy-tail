@@ -8,6 +8,7 @@ import {
   IAllMenu,
   IAllBenefits,
 } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import MenuSection from "@/components/section/MenuSection/MenuSection";
 
 const metaProps = [{ name: `home`, content: `welcome to site` }];
 
@@ -28,10 +29,7 @@ const HomePage: React.FC<IHomeProps> = ({ props }) => {
       <main>
         <HeroSection />
         <BenefitsSection benefits={benefits} />
-
-        {/* <section className="mt-10 py-10 h-screen">
-          <h1 className="text-center">Hello</h1>
-        </section> */}
+        <MenuSection menu={menu} />
       </main>
     </BodyContentWrapper>
   );

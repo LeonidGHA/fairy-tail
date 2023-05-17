@@ -1,10 +1,14 @@
 export interface IAllMenu {
-   allArticles: IMenuItem[] 
+   allVariantDishes: IMenuItem[] 
 }
 
 export interface IMenuItem {
   varietyOfDishes: string;
   id: string;
+  disheImg: {
+      alt:string
+      url: string
+    }
 }
 
 export interface IAllBenefits {
