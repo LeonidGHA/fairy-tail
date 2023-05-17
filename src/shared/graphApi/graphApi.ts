@@ -6,7 +6,7 @@ export function request({
   variables,
 }: {
   query: any,
-  variables: any,
+  variables?: any,
   
 }) {
   const headers = {

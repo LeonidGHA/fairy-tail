@@ -4,9 +4,18 @@ import Header from "@/components/layout/header/Header";
 import HeroSection from "@/components/section/HeroSection/HeroSection";
 import BenefitsSection from "@/components/section/BenefitsSection/BenefitsSection";
 
-const metaProps = [{ name: `home`, content: `welcome to site` }];
+import Image from "next/image";
 
-const HomePage = () => {
+const metaProps = [{ name: `home`, content: `welcome to site` }];
+import {
+  IAllMenu,
+  IBgImage,
+} from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import React from "react";
+
+const HomePage = ({ props }: { props: { menu: IAllMenu } }) => {
+  const { menu } = props;
+
   return (
     <BodyContentWrapper>
       <HeadLayout metaProps={metaProps} />
@@ -14,6 +23,7 @@ const HomePage = () => {
       <main>
         <HeroSection />
         <BenefitsSection />
+
         {/* <section className="mt-10 py-10 h-screen">
           <h1 className="text-center">Hello</h1>
         </section> */}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="mt-10 py-10 ">
+    <section className="mt-14 py-10 ">
       <div className="container mx-auto px-20 flex flex-col items-center">
         <h1>Добро пожаловать к нам!</h1>
         <Link href="/contact" className="text-center">
