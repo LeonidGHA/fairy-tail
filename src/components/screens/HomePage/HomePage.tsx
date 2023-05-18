@@ -3,12 +3,12 @@ import HeadLayout from "@/components/layout/HeadLayout/HeadLayout";
 import Header from "@/components/layout/header/Header";
 import HeroSection from "@/components/section/HeroSection/HeroSection";
 import BenefitsSection from "@/components/section/BenefitsSection/BenefitsSection";
+import MenuSection from "@/components/section/MenuSection/MenuSection";
 
 import {
   IAllMenu,
   IAllBenefits,
 } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
-import MenuSection from "@/components/section/MenuSection/MenuSection";
 
 const metaProps = [{ name: `home`, content: `welcome to site` }];
 

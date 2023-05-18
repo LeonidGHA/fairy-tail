@@ -1,3 +1,5 @@
+import { Link as ScrollLink, animateScroll as Scroll } from "react-scroll";
+
 const Header = () => {
   return (
     <header
@@ -9,13 +11,19 @@ const Header = () => {
         <nav>
           <ul className={" flex gap-10"}>
             <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
-              Home
+              <a onClick={() => Scroll.scrollToTop()}>Home</a>
             </li>
+
             <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
-              Benefits
+              <ScrollLink to="benefits" smooth={true}>
+                Benefits
+              </ScrollLink>
             </li>
+
             <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
-              Menu
+              <ScrollLink to="menu" smooth={true}>
+                Menu
+              </ScrollLink>
             </li>
           </ul>
         </nav>
