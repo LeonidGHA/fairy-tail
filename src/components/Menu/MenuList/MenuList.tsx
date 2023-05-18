@@ -1,15 +1,15 @@
 import { Autoplay, Virtual } from "swiper";
-
-import "swiper/css";
-
-import "swiper/css/virtual";
-import "swiper/css/autoplay";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import MenuItem from "../MenuItem/MenuItem";
 
+import useResizeScreen from "@/shared/hooks/useResizeScreen";
+
 import { IAllMenu } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+
+import "swiper/css";
+import "swiper/css/virtual";
+import "swiper/css/autoplay";
 
 interface IMenuListProps {
   menu: IAllMenu;
@@ -17,12 +17,17 @@ interface IMenuListProps {
 
 const MenuList: React.FC<IMenuListProps> = ({ menu }) => {
   const { allVariantDishes } = menu;
+  const { isMobile, isTablet } = useResizeScreen();
+
+  const slidesPerViewResize = () => {
+    return isMobile ? 1 : isTablet ? 3 : 4;
+  };
 
   return (
     <Swiper
       modules={[Autoplay, Virtual]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={slidesPerViewResize()}
       navigation
       autoplay={{
         delay: 3000,

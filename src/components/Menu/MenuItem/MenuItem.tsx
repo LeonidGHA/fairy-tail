@@ -8,9 +8,12 @@ interface IBenefitItemProp {
 const MenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
   const { disheImg, varietyOfDishes } = menuItem;
   return (
-    <li className="rounded-3xl overflow-hidden shadow-lg ">
+    <div
+      className="rounded-3xl overflow-hidden shadow-slate-400 shadow-lg "
+      onClick={() => console.log(`li`)}
+    >
       <article className="flex flex-col items-center ">
-        <div className="flex max-w-[300px] h-52  overflow-hidden">
+        <div className="flex max-w-full h-52  overflow-hidden">
           <Image
             loading="lazy"
             src={disheImg.url}
@@ -19,11 +22,11 @@ const MenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
             alt={disheImg.alt}
           />
         </div>
-        <div className="p-5 min-w-full text-center ">
+        <div className="p-5 min-w-full text-center  bg-slate-50 ">
           <h3>{varietyOfDishes}</h3>
         </div>
       </article>
-    </li>
+    </div>
   );
 };
 
