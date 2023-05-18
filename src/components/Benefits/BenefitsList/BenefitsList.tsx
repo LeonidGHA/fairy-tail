@@ -10,7 +10,7 @@ const BenefitsList: React.FC<IBenefitsListProps> = ({ benefits }) => {
   const { allBenefitArticles } = benefits;
 
   return (
-    <ul className="flex flex-col p-5 gap-5">
+    <ul className="flex flex-col gap-5">
       {allBenefitArticles.map((benefitItem, idx) => (
         <BenefitItem key={benefitItem.id} benefitItem={benefitItem} idx={idx} />
       ))}

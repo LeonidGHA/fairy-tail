@@ -10,12 +10,12 @@ const MenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
   return (
     <li className="rounded-3xl overflow-hidden shadow-lg ">
       <article className="flex flex-col items-center ">
-        <div className="max-w-[300px]">
+        <div className="flex max-w-[300px] h-52  overflow-hidden">
           <Image
             loading="lazy"
             src={disheImg.url}
-            width={400}
-            height={400}
+            width={disheImg.width}
+            height={200}
             alt={disheImg.alt}
           />
         </div>

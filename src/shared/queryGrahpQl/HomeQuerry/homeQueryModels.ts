@@ -8,6 +8,7 @@ export interface IMenuItem {
   disheImg: {
       alt:string
       url: string
+      width: number
     }
 }
 
@@ -21,6 +22,8 @@ export interface IBenefitsItem {
   description: string
   coverImg: {
     url: string
+    alt: string
+    width: number
   }
 
 }

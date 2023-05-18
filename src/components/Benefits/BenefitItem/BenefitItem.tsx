@@ -15,13 +15,13 @@ const BenefitItem: React.FC<IBenefitItemProp> = ({ benefitItem, idx }) => {
       <article
         className={`flex ${idx % 2 ? "flex-row-reverse" : `flex-row`} gap-4 `}
       >
-        <div className="max-w-[400px]">
+        <div className="max-w-[400px] ">
           <Image
             loading="lazy"
             src={coverImg.url}
-            width={1000}
-            height={1000}
-            alt={`photo`}
+            width={coverImg.width}
+            height={400}
+            alt={coverImg.alt}
           />
         </div>
         <div className="p-5 ">

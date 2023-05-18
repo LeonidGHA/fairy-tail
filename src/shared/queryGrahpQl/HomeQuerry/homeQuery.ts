@@ -8,22 +8,25 @@ export const MENU_QUERY = gql`
     disheImg {
       alt
       url
+      width
     }
   }
 }
 `;
 
 export const ALL_BENEFITS = gql`
-  {
-    allBenefitArticles {
-      title
-      id
-      description
-      coverImg {
-        url
-      }
+   {
+  allBenefitArticles {
+    title
+    id
+    description
+    coverImg {
+      url
+      width
+      alt
     }
   }
+}
 `;
 
 // export const ALL_DISHES_QUERY = gql`
