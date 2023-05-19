@@ -13,7 +13,9 @@ const Contact = () => {
       <main className="flex-grow ">
         <section className=" py-20 ">
           <div className="container mx-auto px-20  ">
-            <h1>Оставьте вашу информацию</h1>
+            <h1 className="text-center font-[Comforter] text-7xl">
+              Оставьте вашу информацию
+            </h1>
             <ContactForm />
           </div>
         </section>

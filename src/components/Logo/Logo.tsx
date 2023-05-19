@@ -18,4 +18,3 @@ const Logo = () => {
 };
 
 export default Logo;
-// src\images\logo\logo.png

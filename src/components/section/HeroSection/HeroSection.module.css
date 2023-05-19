@@ -1,8 +1,9 @@
 .hero {
-  max-width: 1600px;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+align-items: center;
 
-  padding-top: 150px;
-  padding-bottom: 150px;
 
   margin-left: auto;
   margin-right: auto;
@@ -27,10 +28,11 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../../../images/bg-images/bg-hero-tab.webp");
+     
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .hero {
     background-image: linear-gradient(
         to left,
@@ -38,7 +40,6 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../../../images/bg-images/bg-hero-desc.webp");
-    padding-top: 250px;
-    padding-bottom: 250px;
+    
   }
 }

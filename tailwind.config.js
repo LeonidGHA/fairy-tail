@@ -6,7 +6,13 @@ module.exports = {
     "./src/helpers/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+      mobile: "320px",
+
+      tablet: "768px",
+
+      desktop: "1280px",
+    },
   },
   plugins: [],
 };
