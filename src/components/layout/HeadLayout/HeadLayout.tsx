@@ -6,7 +6,7 @@ import { IMetaPropsItem } from "./HeadLayoutModels";
 const HeadLayout = ({ metaProps }: { metaProps: IMetaPropsItem[] }) => {
   return (
     <Head>
-      <title>Create Next App</title>
+      <title>Fairy Tail</title>
       {metaProps?.map((metaItem) => {
         return (
           <meta

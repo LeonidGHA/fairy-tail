@@ -1,10 +1,6 @@
 export const fieldsParams = {
   name: {
     required: "обязательное поле",
-    pattern: {
-      value: /^[A-Za-z]+$/i,
-      message: "Проверьте правильность ввода",
-    },
     minLength: {
       value: 2,
       message: "минимальное кол-во букв 2",
@@ -18,7 +14,7 @@ export const fieldsParams = {
   phone: {
     required: "обязательное поле",
     pattern: {
-      value: /^[A-Za-z]+$/i,
+      value: /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/,
       message: "Проверьте правильность ввода",
     },
     minLength: {
@@ -29,21 +25,25 @@ export const fieldsParams = {
       value: 10,
       message: "максимальное кол-во цифр 10",
     },
+  },
 
-    email: {
-      required: "обязательное поле",
-      pattern: {
-        value: /^[A-Za-z]+$/i,
-        message: "Проверьте правильность ввода",
-      },
-      minLength: {
-        value: 2,
-        message: "минимальное длина 5",
-      },
-      maxLength: {
-        value: 10,
-        message: "максимальное длина 10",
-      },
+  email: {
+    required: "обязательное поле",
+    pattern: {
+      value:
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      message: "Проверьте правильность ввода",
     },
+    minLength: {
+      value: 6,
+      message: "минимальное длина 6",
+    },
+    maxLength: {
+      value: 16,
+      message: "максимальное длина 16",
+    },
+  },
+  agreement: {
+    required: "Подтевердите ваше соглашение",
   },
 };

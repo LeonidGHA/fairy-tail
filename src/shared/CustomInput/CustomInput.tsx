@@ -8,6 +8,8 @@ interface IInputProps {
   errorMessage?: string;
   register: UseFormRegisterReturn;
   placeholder?: string;
+  type?: string;
+  children?: React.ReactNode;
 }
 
 const CustomInput: React.FC<IInputProps> = ({
@@ -17,6 +19,8 @@ const CustomInput: React.FC<IInputProps> = ({
   classNameError,
   errorMessage,
   placeholder,
+  type,
+  children,
 }) => {
   return (
     <label className={classNameLabel}>
@@ -24,7 +28,9 @@ const CustomInput: React.FC<IInputProps> = ({
         {...register}
         placeholder={placeholder}
         className={classNameInput}
+        type={type}
       />
+      {children}
       {errorMessage ? (
         <span className={classNameError}>{errorMessage}</span>
       ) : null}

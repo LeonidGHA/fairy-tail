@@ -37,6 +37,7 @@ const ContactForm = () => {
     >
       <CustomInput
         register={register("name", { ...fieldsParams.name })}
+        type="text"
         classNameLabel={
           "flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] "
         }
@@ -45,78 +46,45 @@ const ContactForm = () => {
         classNameError="absolute bottom-0 inset-x-0 text-center"
         errorMessage={errors.name?.message}
       />
-      {/* <label className="flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] ">
-        <input
-          {...register("name", {
-            required: "обязательное поле",
-            pattern: {
-              value: /^[A-Za-z]+$/i,
-              message: "Проверьте правильность ввода",
-            },
-            minLength: {
-              value: 2,
-              message: "минимальное кол-во букв 2",
-            },
-            maxLength: {
-              value: 10,
-              message: "максимальное кол-во букв 10",
-            },
-          })}
-          placeholder="Ваш телефон"
-          className="border-2 p-2  rounded-xl w-full max-w-[500px]"
-        />
-        {errors.name ? (
-          <span className="absolute bottom-0 inset-x-0 text-center">
-            {errors.name.message}
-          </span>
-        ) : null}
-      </label>
 
-      <label className="flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px]">
-        <input
-          {...register("phone", {
-            required: true,
-            maxLength: 11,
-          })}
-          placeholder="Ваш телефон"
-          className="border-2 p-2 rounded-xl w-full max-w-[500px] "
-        />
-        {errors.phone ? (
-          <span className="absolute bottom-0 inset-x-0 text-center">
-            Проверьте правильность ввода
-          </span>
-        ) : null}
-      </label>
+      <CustomInput
+        register={register("phone", { ...fieldsParams.phone })}
+        type="tel"
+        classNameLabel={
+          "flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] "
+        }
+        classNameInput="border-2 p-2  rounded-xl w-full max-w-[500px]"
+        placeholder="Ваш Телефон"
+        classNameError="absolute bottom-0 inset-x-0 text-center"
+        errorMessage={errors.phone?.message}
+      />
 
-      <label className="flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px]">
-        <input
-          {...register("email", {
-            required: true,
-            pattern:
-              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          })}
-          placeholder="Ваша почта"
-          className="border-2 p-2 rounded-xl w-full max-w-[500px] required:border-red-500 "
-        />
-        {errors.email ? (
-          <span className="absolute  bottom-0 inset-x-0 text-center">
-            Проверьте правильность ввода
-          </span>
-        ) : null}
-      </label>
+      <CustomInput
+        register={register("email", { ...fieldsParams.email })}
+        type="email"
+        classNameLabel={
+          "flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] "
+        }
+        classNameInput="border-2 p-2  rounded-xl w-full max-w-[500px]"
+        placeholder="Ваша Почта"
+        classNameError="absolute bottom-0 inset-x-0 text-center"
+        errorMessage={errors.email?.message}
+      />
 
-      <label className="flex flex-col relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] ">
-        <input
-          {...register("agreement", { required: true })}
-          type="checkbox"
-          className=""
-        />
-        {errors.agreement ? (
-          <span className="absolute  bottom-0 inset-x-0 text-center">
-            Подтвердите соглашение
-          </span>
-        ) : null}
-      </label> */}
+      <CustomInput
+        register={register("agreement", { ...fieldsParams.agreement })}
+        type="checkbox"
+        classNameLabel={
+          "flex items-center justify-center relative border-2 p-2 pb-6 rounded-xl w-full max-w-[500px] "
+        }
+        classNameInput="mr-2"
+        classNameError="absolute bottom-0 inset-x-0 text-center"
+        errorMessage={errors.agreement?.message}
+      >
+        <span>
+          Соглашаюсь с рассылкой и принимаю <span>Условия договора</span>
+        </span>
+      </CustomInput>
 
       <button type="submit" className="border-5">
         Отправить

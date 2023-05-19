@@ -1,5 +1,5 @@
 import HomePage from "@/components/screens/HomePage/HomePage";
-import { GetStaticProps } from "next";
+import { GetStaticProps, GetServerSideProps } from "next";
 
 import { request } from "@/shared/graphApi/graphApi";
 
@@ -13,6 +13,13 @@ import {
   IAllBenefits,
 } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
 
+interface IHomeProps {
+  props: {
+    menu: IAllMenu;
+    benefits: IAllBenefits;
+  };
+}
+
 export default function Home(props: {
   menu: IAllMenu;
   benefits: IAllBenefits;
@@ -20,7 +27,7 @@ export default function Home(props: {
   return <HomePage props={props} />;
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const menu = await request({
     query: MENU_QUERY,
   });
