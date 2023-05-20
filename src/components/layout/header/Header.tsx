@@ -5,24 +5,28 @@ const Header = () => {
   return (
     <header
       className={
-        "bg-stone-500 opacity-80 border-b-2 border-rose-600 fixed  top-0 left-0 right-0 "
+        "fixed left-0 right-0 top-0 border-b-2  border-rose-600 bg-stone-500 opacity-80 "
       }
     >
-      <div className={"container mx-auto px-20 flex items-center"}>
+      <div
+        className={
+          "container mx-auto flex items-center px-6 tablet:container tablet:px-16 desktop:px-20"
+        }
+      >
         <Logo />
-        <nav className="grow">
-          <ul className={" flex gap-10 justify-center"}>
-            <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
+        <nav className=" grow font-[Comforter] mobileOnly:ml-5">
+          <ul className={" flex justify-center gap-10"}>
+            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <a onClick={() => Scroll.scrollToTop()}>Home</a>
             </li>
 
-            <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
+            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <ScrollLink to="benefits" smooth={true}>
                 Benefits
               </ScrollLink>
             </li>
 
-            <li className="flex transition-all py-4 color-black hover:text-pink-600 duration-300">
+            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <ScrollLink to="menu" smooth={true}>
                 Menu
               </ScrollLink>
