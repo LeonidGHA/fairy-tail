@@ -20,22 +20,22 @@ const MenuList: React.FC<IMenuListProps> = ({ menu }) => {
   const { isMobile, isTablet } = useResizeScreen();
 
   const slidesPerViewResize = () => {
-    return isMobile ? 1 : isTablet ? 3 : 4;
+    return isMobile ? 2 : isTablet ? 3 : 4;
   };
 
   return (
     <Swiper
       modules={[Autoplay, Virtual]}
-      spaceBetween={50}
+      spaceBetween={30}
       slidesPerView={slidesPerViewResize()}
-      navigation
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
       }}
+      className="grow"
     >
       {allVariantDishes.map((menuItem, idx) => (
-        <SwiperSlide key={menuItem.id} virtualIndex={idx} className="py-8">
+        <SwiperSlide key={menuItem.id} virtualIndex={idx} className="grow pb-8">
           <MenuItem menuItem={menuItem} key={menuItem.id} />
         </SwiperSlide>
       ))}

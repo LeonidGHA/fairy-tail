@@ -1,8 +1,8 @@
 .menu {
   max-width: 1600px;
 
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   margin-left: auto;
   margin-right: auto;
@@ -38,7 +38,7 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../../../images/bg-images/bg-menu.webp");
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
