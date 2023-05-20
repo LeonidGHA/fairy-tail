@@ -12,7 +12,7 @@ const Logo = () => {
         width={70}
         height={50}
         alt={"Logo restaraunt"}
-        className="h-auto max-w-fit"
+        className="h-auto  max-w-fit"
       />
     </Link>
   );

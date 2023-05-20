@@ -5,7 +5,7 @@ import css from "./HeroSection.module.css";
 const HeroSection = () => {
   return (
     <section className={css.hero}>
-      <div className="container mx-auto flex flex-col items-center px-6 tablet:container tablet:px-16 desktop:px-20">
+      <div className="container mx-auto flex flex-col items-center px-6 tablet:px-16 desktop:px-20">
         <h1 className=" mobile:text-large mb-20 text-center font-[Comforter] text-neutral-200 underline decoration-4 mobile:text-4xl tablet:text-6xl desktop:text-8xl">
           Добро пожаловать к нам!
         </h1>

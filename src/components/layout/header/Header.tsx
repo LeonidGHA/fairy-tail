@@ -10,7 +10,7 @@ const Header = () => {
     >
       <div
         className={
-          "container mx-auto flex items-center px-6 tablet:container tablet:px-16 desktop:px-20"
+          "container mx-auto flex items-center px-6 tablet:px-16 desktop:px-20"
         }
       >
         <Logo />
