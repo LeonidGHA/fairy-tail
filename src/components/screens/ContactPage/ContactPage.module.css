@@ -1,0 +1,45 @@
+.contact {
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  flex-grow: 1;
+ 
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to left,
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
+    ),
+    url("../../../images/bg-images/bg-contact.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    background-image: linear-gradient(
+        to left,
+        rgba(47, 48, 58, 0.6),
+        rgba(47, 48, 58, 0.6)
+      ),
+      url("../../../images/bg-images/bg-contact.jpg");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contact {
+    background-image: linear-gradient(
+        to left,
+        rgba(47, 48, 58, 0.6),
+        rgba(47, 48, 58, 0.6)
+      ),
+      url("../../../images/bg-images/bg-contact.jpg");
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}

@@ -6,8 +6,8 @@ export const fieldsParams = {
       message: "минимальное кол-во букв 2",
     },
     maxLength: {
-      value: 10,
-      message: "максимальное кол-во букв 10",
+      value: 20,
+      message: "максимальное кол-во букв 20",
     },
   },
 
@@ -39,8 +39,8 @@ export const fieldsParams = {
       message: "минимальное длина 6",
     },
     maxLength: {
-      value: 16,
-      message: "максимальное длина 16",
+      value: 20,
+      message: "максимальное длина 20",
     },
   },
   agreement: {
