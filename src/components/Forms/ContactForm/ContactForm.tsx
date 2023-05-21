@@ -37,7 +37,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col  items-center tablet:p-10"
+      className="flex flex-col  items-center tablet:px-10"
     >
       <CustomInput
         register={register("name", { ...fieldsParams.name })}

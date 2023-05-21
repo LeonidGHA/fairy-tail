@@ -1,10 +1,13 @@
+import Logo from "@/components/Logo/Logo";
+
 const SimpleHeader = () => {
   return (
-    <header className="bg-stone-500 border-b-2 border-rose-600  top-0 left-0 right-0 py-4">
-      <div className="container mx-auto px-20">
-        <p className="text-center">
-          Logo <span>Fairy tail</span>
-        </p>
+    <header className="border-b-2 border-rose-600 bg-stone-500">
+      <div className="container mx-auto flex justify-center px-6 tablet:px-16 desktop:px-20">
+        <div className="flex items-center justify-center  py-2 font-[Comforter] text-2xl text-neutral-200 tablet:text-4xl ">
+          <Logo />
+          <span className="">Fairy tail</span>
+        </div>
       </div>
     </header>
   );

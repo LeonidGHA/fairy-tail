@@ -15,7 +15,7 @@ const ContactPage = () => {
       <main className="flex flex-grow  ">
         <section className={css.contact}>
           <div className="container mx-auto flex flex-col items-center px-6 tablet:px-16 desktop:px-20 ">
-            <h1 className="text-center font-[Comforter] text-7xl text-white">
+            <h1 className="mb-8 text-center font-[Comforter] text-7xl text-white">
               Оставьте вашу информацию
             </h1>
             <ContactForm />
