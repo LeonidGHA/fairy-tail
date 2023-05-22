@@ -13,7 +13,10 @@ const Header = () => {
           "container mx-auto flex items-center px-6 tablet:px-16 desktop:px-20"
         }
       >
-        <Logo />
+        <div className="w-14 tablet:w-20">
+          <Logo />
+        </div>
+
         <nav className=" grow font-[Comforter] mobileOnly:ml-5">
           <ul className={" flex justify-center gap-10"}>
             <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">

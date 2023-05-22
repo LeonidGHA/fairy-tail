@@ -1,8 +1,8 @@
 import { Element } from "react-scroll";
 
-import MenuList from "@/components/Menu/MenuList/MenuList";
+import SectionMenuList from "@/components/Menu/SectionMenuList/SectionMenuList";
 
-import { IAllMenu } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IAllMenu } from "@/shared/queryGrahpQl/QueryModels";
 
 import css from "./MenuSection.module.css";
 
@@ -19,7 +19,7 @@ const MenuSection: React.FC<IMenuSectionProps> = ({ menu }) => {
             Наше меню
           </h2>
 
-          <MenuList menu={menu} />
+          <SectionMenuList menu={menu} />
         </div>
       </Element>
     </section>

@@ -1,6 +1,6 @@
 import BenefitItem from "../BenefitItem/BenefitItem";
 
-import { IAllBenefits } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IAllBenefits } from "@/shared/queryGrahpQl/QueryModels";
 
 interface IBenefitsListProps {
   benefits: IAllBenefits;

@@ -5,21 +5,18 @@ import HeroSection from "@/components/section/HeroSection/HeroSection";
 import BenefitsSection from "@/components/section/BenefitsSection/BenefitsSection";
 import MenuSection from "@/components/section/MenuSection/MenuSection";
 
-import {
-  IAllMenu,
-  IAllBenefits,
-} from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IAllMenu, IAllBenefits } from "@/shared/queryGrahpQl/QueryModels";
 
-const metaProps = [{ name: `home`, content: `welcome to site` }];
+const metaProps = [
+  { name: `домашняя страница`, content: `добро пожаловать на сайт Fairy Tail` },
+];
 
 interface IHomeProps {
-  props: {
-    menu: IAllMenu;
-    benefits: IAllBenefits;
-  };
+  menu: IAllMenu;
+  benefits: IAllBenefits;
 }
 
-const HomePage: React.FC<IHomeProps> = ({ props }) => {
+const HomePage: React.FC<IHomeProps> = (props) => {
   const { menu, benefits } = props;
 
   return (

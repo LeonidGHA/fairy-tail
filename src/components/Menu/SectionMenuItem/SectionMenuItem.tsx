@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { IMenuItem } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IMenuItem } from "@/shared/queryGrahpQl/QueryModels";
 
 interface IBenefitItemProp {
   menuItem: IMenuItem;
 }
-const MenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
+const SectionMenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
   const { disheImg, varietyOfDishes } = menuItem;
   return (
     <div className="group flex overflow-hidden rounded-3xl shadow-lg shadow-slate-400 hover:shadow-lime-200  mobile:h-40 tablet:h-48 desktop:h-60 ">
-      <Link href="/contact">
+      <Link href="/menu">
         <article className="flex h-full grow flex-col items-center ">
           <div className="flex  h-24 overflow-hidden tablet:h-32 desktop:h-44 ">
             <Image
@@ -31,4 +31,4 @@ const MenuItem: React.FC<IBenefitItemProp> = ({ menuItem }) => {
   );
 };
 
-export default MenuItem;
+export default SectionMenuItem;

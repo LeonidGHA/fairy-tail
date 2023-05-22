@@ -1,11 +1,11 @@
 import { Autoplay, Virtual } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import MenuItem from "../MenuItem/MenuItem";
+import MenuItem from "../SectionMenuItem/SectionMenuItem";
 
 import useResizeScreen from "@/shared/hooks/useResizeScreen";
 
-import { IAllMenu } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IAllMenu } from "@/shared/queryGrahpQl/QueryModels";
 
 import "swiper/css";
 import "swiper/css/virtual";
@@ -15,7 +15,7 @@ interface IMenuListProps {
   menu: IAllMenu;
 }
 
-const MenuList: React.FC<IMenuListProps> = ({ menu }) => {
+const SectionMenuList: React.FC<IMenuListProps> = ({ menu }) => {
   const { allVariantDishes } = menu;
   const { isMobile, isTablet } = useResizeScreen();
 
@@ -43,4 +43,4 @@ const MenuList: React.FC<IMenuListProps> = ({ menu }) => {
   );
 };
 
-export default MenuList;
+export default SectionMenuList;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { IBenefitsItem } from "@/shared/queryGrahpQl/HomeQuerry/homeQueryModels";
+import { IBenefitsItem } from "@/shared/queryGrahpQl/QueryModels";
 
 interface IBenefitItemProp {
   benefitItem: IBenefitsItem;
@@ -13,18 +13,18 @@ const BenefitItem: React.FC<IBenefitItemProp> = ({ benefitItem, idx }) => {
   return (
     <li>
       <article
-        className={`flex ${
+        className={`flex items-center ${
           idx % 2 ? "flex-row-reverse" : `flex-row`
         } gap-4 mobileOnly:flex-col`}
       >
-        <div className=" tablet:flex tablet:max-w-[300px] tablet:items-center desktop:max-w-[400px]">
+        <div className="  h-fit grow-0 shadow-xl tablet:max-w-[300px] desktop:max-w-[400px]">
           <Image
             loading="lazy"
             src={coverImg.url}
             width={coverImg.width}
-            height={400}
+            height={500}
             alt={coverImg.alt}
-            className="shadow-xl"
+            className="object-contain"
           />
         </div>
         <div className="border-2 border-slate-50 p-5 shadow-xl desktop:flex desktop:flex-col desktop:justify-center">
