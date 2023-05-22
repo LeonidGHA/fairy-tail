@@ -11,8 +11,6 @@ import { IHomeQueryProps } from "@/shared/queryGrahpQl/QueryModels";
 const MenuQueryPage: React.FC<IHomeQueryProps> = ({ dishes }) => {
   const { allDishes, allVariantDishes } = dishes;
   const { asPath, pathname } = useRouter();
-  console.log(`path`, asPath);
-  console.log(`path name`, pathname);
 
   const metaProps = [
     {
@@ -20,6 +18,10 @@ const MenuQueryPage: React.FC<IHomeQueryProps> = ({ dishes }) => {
       content: `наше меню`,
     },
   ];
+
+  console.log(`path`, asPath);
+  console.log(`path name`, pathname);
+
   return (
     <BodyContentWrapper>
       <HeadLayout metaProps={metaProps} />

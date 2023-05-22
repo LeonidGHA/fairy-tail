@@ -56,14 +56,23 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
       query: MENU_QUERY,
     });
 
-    const paths = menu.allVariantDishes.map((dishes) => ({
-      params: {
-        id: dishes.id,
-      },
-    }));
-    console.log(paths);
+    // const paths = menu.allVariantDishes.map((dishes) => ({
+    //   params: {
+    //     id: dishes.id,
+    //   },
+    // }));
+    // console.log(paths);
 
-    return { paths, fallback: false };
+    return {
+      paths: [
+        { params: { id: "114555990" } },
+        { params: { id: "114705964" } },
+        { params: { id: "114705967" } },
+        { params: { id: "114705951" } },
+        { params: { id: "114705943" } },
+      ],
+      fallback: false,
+    };
   } catch (error) {
     return { paths: [{ params: { id: "" } }], fallback: false };
   }
