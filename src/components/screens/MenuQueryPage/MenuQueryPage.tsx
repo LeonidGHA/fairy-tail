@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import BodyContentWrapper from "@/helpers/BodyContentWrapper/BodyContentWrapper";
 import HeadLayout from "@/components/layout/HeadLayout/HeadLayout";
@@ -10,7 +9,6 @@ import { IHomeQueryProps } from "@/shared/queryGrahpQl/QueryModels";
 
 const MenuQueryPage: React.FC<IHomeQueryProps> = ({ dishes }) => {
   const { allDishes, allVariantDishes } = dishes;
-  const { asPath, pathname } = useRouter();
 
   const metaProps = [
     {
@@ -18,9 +16,6 @@ const MenuQueryPage: React.FC<IHomeQueryProps> = ({ dishes }) => {
       content: `наше меню`,
     },
   ];
-
-  console.log(`path`, asPath);
-  console.log(`path name`, pathname);
 
   return (
     <BodyContentWrapper>
