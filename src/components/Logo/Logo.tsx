@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import LogoImg from "../../images/logo/Logo.png";
+import LogoImg from "../../images/logo/logo.png";
 
 const Logo = () => {
   return (
