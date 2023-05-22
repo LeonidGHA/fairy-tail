@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import BodyContentWrapper from "@/helpers/BodyContentWrapper/BodyContentWrapper";
 import HeadLayout from "@/components/layout/HeadLayout/HeadLayout";
@@ -10,6 +11,9 @@ const metaProps = [{ name: `меню`, content: `наше меню` }];
 import { IMenuProps } from "@/shared/queryGrahpQl/QueryModels";
 
 const MenuPage: React.FC<IMenuProps> = ({ menu }) => {
+  const { asPath, pathname } = useRouter();
+  console.log(`path`, asPath);
+  console.log(`path name`, pathname);
   return (
     <BodyContentWrapper>
       <HeadLayout metaProps={metaProps} />

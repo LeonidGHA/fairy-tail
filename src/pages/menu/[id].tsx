@@ -61,6 +61,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
         id: dishes.id,
       },
     }));
+    console.log(paths);
 
     return { paths, fallback: false };
   } catch (error) {
