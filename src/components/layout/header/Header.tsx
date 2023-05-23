@@ -19,19 +19,19 @@ const Header = () => {
 
         <nav className=" grow font-[Comforter] mobileOnly:ml-5">
           <ul className={" flex justify-center gap-10"}>
-            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
+            <li className="color-black  flex cursor-pointer py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <a href="#" onClick={() => Scroll.scrollToTop()}>
                 Home
               </a>
             </li>
 
-            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
+            <li className="color-black flex cursor-pointer py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <ScrollLink to="benefits" smooth={true}>
                 Benefits
               </ScrollLink>
             </li>
 
-            <li className="color-black flex py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
+            <li className="color-black  flex cursor-pointer py-4 text-lg transition-all duration-300 hover:text-pink-600 tablet:text-2xl desktop:text-3xl">
               <ScrollLink to="menu" smooth={true}>
                 Menu
               </ScrollLink>
