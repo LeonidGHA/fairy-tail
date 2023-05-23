@@ -13,9 +13,7 @@ const Header = () => {
           "container mx-auto flex items-center px-6 tablet:px-16 desktop:px-20"
         }
       >
-        <div className="w-14 tablet:w-20">
-          <Logo />
-        </div>
+        <Logo classNameImgWrapper="w-14 tablet:w-20" />
 
         <nav className=" grow font-[Comforter] mobileOnly:ml-5">
           <ul className={" flex justify-center gap-10"}>
