@@ -30,6 +30,7 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
     });
     return {
       props: { menu, benefits },
+      revalidate: 20,
     };
   } catch (error) {
     return {
