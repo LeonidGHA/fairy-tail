@@ -21,6 +21,7 @@ export const getStaticProps: GetStaticProps<IMenuProps> = async () => {
 
     return {
       props: { menu },
+      revalidate: 10,
     };
   } catch (error) {
     return {
