@@ -30,11 +30,12 @@ export const getStaticProps: GetStaticProps<IHomeQueryProps> = async ({
       query: ALL_DISHES_QUERY,
       variables: { ItemId: params?.id },
     });
-
+    console.log(allDishes);
     return {
       props: {
         dishes: allDishes,
       },
+      revalidate: 10,
     };
   } catch (error) {
     return {

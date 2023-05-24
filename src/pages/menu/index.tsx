@@ -17,6 +17,7 @@ export const getStaticProps: GetStaticProps<IMenuProps> = async () => {
     const menu: IAllMenu = await request<IAllMenu>({
       query: MENU_QUERY,
     });
+    console.log(menu);
 
     return {
       props: { menu },
