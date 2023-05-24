@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps<IMenuProps> = async () => {
 
     return {
       props: { menu },
-      revalidate: 20,
     };
   } catch (error) {
     return {

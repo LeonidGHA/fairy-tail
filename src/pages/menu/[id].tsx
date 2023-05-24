@@ -35,7 +35,6 @@ export const getStaticProps: GetStaticProps<IHomeQueryProps> = async ({
       props: {
         dishes: allDishes,
       },
-      revalidate: 60,
     };
   } catch (error) {
     return {
